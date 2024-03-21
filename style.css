@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.body-inline-space {
+  padding-inline: 5rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  padding-block: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.header-about {
+  position: relative;
+}
+
+.header-about::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1.6px solid black;
+  width: 8%;
+  top: 10px;
+  left: -35px;
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+.store-link {
+  position: relative;
+}
+
+.store-link::after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 20%;
+  background: yellow;
+  top: 0;
+  right: -20px;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 9rem;
+  line-height: 9rem;
+}
+
+h1 span {
+  font-size: 1.5rem;
+}
+
+.case-studies-header {
+  margin-block: 8rem 4rem;
+}
+
+.cards,
+.cards-info {
+  display: flex;
+  gap: 3rem;
+}
+
+.study-card {
+  border-radius: 3rem;
+  background: gainsboro;
+  width: 50%;
+  overflow: hidden;
+}
+
+.study-card img {
+  object-fit: contain;
+  width: 80%;
+  height: 30rem;
+}
+
+.study-card-info {
+  padding-inline: 0.5rem;
+  width: 50%;
+}
+
+.cards-info {
+  padding-block: 1.7rem;
+}
+
+.study-card-info h3 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.study-card-info p {
+  color: gray;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.7rem;
+}
+
+.study-card-info i {
+  position: relative;
+}
+
+.study-card-info i::before {
+  position: absolute;
+  top: 50%;
+  transform: translate(-85%, -50%);
+  font-size: 2rem;
+  padding: 0.8rem;
+  border-radius: 3rem;
+  border: 2px solid rgb(58, 58, 58);
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.study-card-info i:hover::before {
+  background-color: rgb(21, 21, 21);
+  transform: translate(-75%, -50%);
+  color: white;
+}
